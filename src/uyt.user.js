@@ -14,16 +14,17 @@
 // @downloadURL https://raw.githubusercontent.com/nutbread/uyt/master/src/uyt.user.js
 // ==/UserScript==
 // ==ChromeExtension==
-// @permission  http://youtube.com/
-// @permission  https://youtube.com/
-// @permission  http://*.youtube.com/
-// @permission  https://*.youtube.com/
-// @icon-size   16:bilinear
-// @icon-size   32:bilinear
-// @icon-size   48:bilinear
-// @icon-size   64:bilinear
-// @icon-size   128:bilinear
-// @update-url  https://raw.githubusercontent.com/nutbread/uyt/master/builds/uyt.update.xml
+// @permission   http://youtube.com/
+// @permission   https://youtube.com/
+// @permission   http://*.youtube.com/
+// @permission   https://*.youtube.com/
+// @icon-size    16:bilinear
+// @icon-size    32:bilinear
+// @icon-size    48:bilinear
+// @icon-size    64:bilinear
+// @icon-size    128:bilinear
+// @update-url   https://raw.githubusercontent.com/nutbread/uyt/master/builds/uyt.update.xml
+// @download-url https://raw.githubusercontent.com/nutbread/uyt/master/builds/uyt.crx
 // ==/ChromeExtension==
 
 
@@ -80,25 +81,6 @@
 				clear_events();
 			}
 		};
-		var on_document_load = function () {
-			// Loaded
-			state = 2;
-
-			// Callbacks
-			var c;
-			if (callbacks_asap !== null) {
-				c = callbacks_asap;
-				callbacks_asap = null;
-				trigger_callbacks(c);
-			}
-
-			c = callbacks_ready;
-			callbacks_ready = null;
-			trigger_callbacks(c);
-
-			// Complete
-			clear_events();
-		};
 		var on_callbacks_check = function () {
 			// Test all
 			for (var i = 0; i < callbacks_check.length; ++i) {
@@ -141,7 +123,6 @@
 
 				// Remove events
 				document.removeEventListener("readystatechange", on_document_readystatechange, false);
-				document.removeEventListener("load", on_document_load, false);
 
 				// Clear callbacks
 				callbacks_asap = null;
@@ -219,7 +200,6 @@
 		on_document_readystatechange();
 		if (state < 2) {
 			document.addEventListener("readystatechange", on_document_readystatechange, false);
-			document.addEventListener("load", on_document_load, false);
 			on_document_readystatechange_interval = setInterval(on_document_readystatechange, 20);
 		}
 
