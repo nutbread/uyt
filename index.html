@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Tools for building chrome extensions" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="nutbread" />
+	<title>Usable YouTube</title>
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<div class="header_bar">
+	<div class="main main_no_overflow header">
+
+		<table class="header_table"><tbody>
+			<tr>
+				<td class="header_table_cell">
+					<div class="header_table_name">
+						<a class="header_table_name_user link_external link_author light_underline" href="https://github.com/nutbread" target="_blank"><span>nutbread</span></a><span class="header_table_name_separator">/</span><a href="" class="header_table_name_title link_external link_title light_underline"><span>uyt</span></a>
+					</div>
+				</td>
+				<td class="header_table_cell">
+					<div class="header_table_separator"></div>
+				</td>
+				<td class="header_table_cell header_table_cell_full">
+					<div class="header_table_description">
+						<div class="header_table_description_name">Usable YouTube</div>
+						<div class="header_table_description_body">Makes YouTube more usable</div>
+					</div>
+				</td>
+				<td class="header_table_cell">
+					<a class="header_table_view_on_github link_external link_view_on_github light_nohover_color_hover" href="https://github.com/nutbread/uyt" target="_blank">
+						<div class="header_table_view_on_github_line1">view on</div>
+						<div class="header_table_view_on_github_line2">github</div>
+					</a>
+				</td>
+			</tr>
+		</tbody></table>
+
+	</div>
+</div>
+<div class="main body">
+
+	<h1 id="usable.youtube"><span class="hardlink_text">Usable YouTube<a class="hardlink" href="#usable.youtube">#</a></span></h1>
+	<p>
+		YouTube changes it's site design almost every other month, often moving links and features into more obscure places.
+	</p>
+	<p>
+		&ldquo;Usable YouTube&rdquo; adds a few features and adds a few links to make pages take less clicks to access.
+	</p>
+
+	<h4 id="features"><span class="hardlink_text">Features<a class="hardlink" href="#features">#</a></span></h4>
+	<p>
+		Note that these features are only available for an account that is logged in, otherwise they simply do not come into play.
+	</p>
+	<p>
+		<ul>
+			<li>
+				<p>
+					An uploading video can be canceled <i>and</i> deleted with a single click, without having to leave the tab.<br />
+					Note: this only works if the &ldquo;Your video will be live at:&rdquo; notifier appears on the right. <span class="light">(usually doesn't appear on resumed uploads)</span>
+				</p>
+				<p>
+					<div class="preview_image" style="width: 414px; height: 138px; background-image: url('upload_cancel_preview.png');"></div>
+				</p>
+			</li>
+			<li>
+				<p>
+					A few additional links are available where they were (approximately) before a previous update.<br />
+					Because it's ridiculous that it went from taking 2 clicks to get to &ldquo;My Videos&rdquo;, to 3 clicks <i>and</i> a page change.
+				</p>
+				<p>
+					<div class="preview_image" style="width: 304px; height: 298px; background-image: url('account_card_preview.png');"></div>
+				</p>
+			</li>
+		</ul>
+	</p>
+
+	<h4 id="installation"><span class="hardlink_text">Installation<a class="hardlink" href="#installation">#</a></span></h4>
+	<h6>
+		For Firefox:
+	</h6>
+	<p>
+		<ul>
+			<li>
+				Download and install <a class="link_external light_underline" href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/" target="_blank"><span>Greasemonkey</span></a>
+			</li>
+			<li>
+				<a class="link_codebase_raw light_underline" href="https://raw.githubusercontent.com/nutbread/uyt/master/src/uyt.user.js" target="_blank" download="js2crx.py"><span>Install</span></a> the userscript through Greasemonkey
+			</li>
+		</ul>
+	</p>
+	<h6>
+		For Chrome:
+	</h6>
+	<p>
+		<ul>
+			<li>
+				Download and install <a class="link_external light_underline" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank"><span>Tampermonkey</span></a>
+			</li>
+			<li>
+				<a class="link_codebase_raw light_underline" href="https://raw.githubusercontent.com/nutbread/uyt/master/src/uyt.user.js" target="_blank" download="js2crx.py"><span>Install</span></a> the userscript through Tampermonkey
+			</li>
+		</ul>
+	</p>
+	<h6>
+		For <a class="link_external light_underline" href="https://chrome.google.com/webstore/category/extensions" target="_blank"><span>Chrome extension (<code>.crx</code>)</span></a> usage:
+	</h6>
+	<p>
+		<ul>
+			<li>
+				If you use Chrome, replace your Chrome installation with <a class="link_external light_underline" href="http://www.chromium.org/getting-involved/dev-channel" target="_blank"><span>Chrome dev channel</span></a><br />
+				<span class="light">The extension is not on the webstore, so Google makes you jump through hoops to do what you want with their browser</span>
+			</li>
+			<li>
+				<a class="link_codebase_raw light_underline" href="https://raw.githubusercontent.com/nutbread/uyt/master/builds/uyt.crx" target="_blank" download="uyt.crx"><span>Download</span></a> the Chrome extension to your computer
+			</li>
+			<li>
+				Navigate to <a class="link_fake light_underline"><span>chrome://extensions</span></a> (&ldquo;Menu&rdquo; &ndash;&gt; &ldquo;Settings&rdquo; &ndash;&gt; &ldquo;Extensions&rdquo;)
+			</li>
+			<li>
+				Drag and drop the <code>uyt.crx</code> file into the window
+			</li>
+		</ul>
+	</p>
+
+</div>
+
+
+</body>
+</html>
+
