@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Usable YouTube
 // @description Makes YouTube more usable
-// @version     1.0
+// @version     1.1
 // @namespace   nutbread
 // @include     http://youtube.com/*
 // @include     https://youtube.com/*
